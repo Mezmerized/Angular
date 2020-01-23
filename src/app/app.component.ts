@@ -28,4 +28,20 @@ export class AppComponent {
        // this.films = data;
        })
   }
+
+  onGetPlanets() {
+    this.httpService.getPlanets()
+        .subscribe(
+       data => {console.log(data);
+       // this.films = data;
+       })
+  }
+
+  onGetSpecies() {
+    this.httpService.getSpecies()
+        .subscribe(
+       data => {console.log(data);
+       // this.films = data;
+       })
+  }
 }

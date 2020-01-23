@@ -15,6 +15,14 @@ export class HttpService {
         return this.httpClient.get('https://swapi.co/api/films/')
         }
 
+    getPlanets() {
+        return this.httpClient.get('https://swapi.co/api/planets/')
+        }
+        
+    getSpecies() {
+        return this.httpClient.get('https://swapi.co/api/species/')
+        }
+
 }
 
 
