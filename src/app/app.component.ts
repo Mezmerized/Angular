@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpService } from './http.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,6 +11,11 @@ import { HttpService } from './http.service';
 export class AppComponent {
   people: any = [];
   films: any = [];
+  planets: any [];
+  species: any [];
+  vehicles: any [];
+  starships: any [];
+
 
   constructor(private httpService: HttpService) {}
 
@@ -33,7 +39,7 @@ export class AppComponent {
     this.httpService.getPlanets()
         .subscribe(
        data => {console.log(data);
-       // this.films = data;
+       // this.planets = data;
        })
   }
 
@@ -41,7 +47,23 @@ export class AppComponent {
     this.httpService.getSpecies()
         .subscribe(
        data => {console.log(data);
-       // this.films = data;
+       // this.species = data;
+       })
+  }
+
+  onGetVehicles() {
+    this.httpService.getVehicles()
+        .subscribe(
+       data => {console.log(data);
+       // this.vehicles = data;
+       })
+  }
+
+  onGetStarships() {
+    this.httpService.getStarships()
+        .subscribe(
+       data => {console.log(data);
+       // this.starships = data;
        })
   }
 }
