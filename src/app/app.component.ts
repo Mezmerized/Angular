@@ -23,7 +23,7 @@ export class AppComponent {
     this.httpService.getPeople()
         .subscribe(
        data => {console.log(data);
-       // this.people = data;
+        // this.people = data;
         // people: any = [];
         // --> causes "ERROR Error: Error trying to diff '[object Object]'. Only arrays and iterables are allowed"
         // people: any = {};
