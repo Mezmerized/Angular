@@ -8,6 +8,8 @@
     padding: 25px;
 }
 
+
+
 .footer {
 position: fixed;
 bottom: 0%;
@@ -38,6 +40,7 @@ padding: 0.375rem 0.75rem;
 font-size: 1rem;
 line-height: 1.5;
 border-radius: 0.25rem;
+width: 20vh;
 -webkit-transition: ease-in-out 240ms;
 -moz-transition: ease-in-out 240ms;
 -ms-transition: ease-in-out 240ms;

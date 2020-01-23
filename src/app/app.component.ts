@@ -11,10 +11,10 @@ import { HttpService } from './http.service';
 export class AppComponent {
   people: any = [];
   films: any = [];
-  planets: any [];
-  species: any [];
-  vehicles: any [];
-  starships: any [];
+  planets: any = [];
+  species: any = [];
+  vehicles: any = [];
+  starships: any = [];
 
 
   constructor(private httpService: HttpService) {}
@@ -24,6 +24,10 @@ export class AppComponent {
         .subscribe(
        data => {console.log(data);
        // this.people = data;
+        // people: any = [];
+        // --> causes "ERROR Error: Error trying to diff '[object Object]'. Only arrays and iterables are allowed"
+        // people: any = {};
+        // --> causes "ERROR Error: Cannot find a differ supporting object '[object Object]' of type 'object'. NgFor only supports binding to Iterables such as Arrays."
        })
   }
 
